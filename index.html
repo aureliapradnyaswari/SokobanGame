@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sokoban – push crates, solve with search</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Sokoban</h1>
+            <p>Push every crate onto a goal. You can only push, never pull. When you are stuck, let BFS or DFS solve it.</p>
+        </header>
+
+        <main>
+            <section>
+                <canvas id="board" aria-label="Sokoban board"></canvas>
+                <p id="msg" role="status"></p>
+                <p class="keys">Arrow keys or WASD to move. Z to undo. R to restart.</p>
+            </section>
+            <aside class="panel">
+                <div>
+                    <h2>Level</h2>
+                    <label for="level">Choose a level</label>
+                    <select id="level"></select>
+                    <div class="row">
+                        <button id="undo">Undo</button>
+                        <button id="restart">Restart</button>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Solver</h2>
+                    <label for="algo">Algorithm</label>
+                    <select id="algo">
+                        <option value="bfs">BFS (breadth-first search, queue)</option>
+                        <option value="dfs">DFS (depth-first search, stack)</option>
+                    </select>
+                    <div class="row">
+                        <button id="solve" class="go">Solve</button>
+                        <button id="hint">Hint</button>
+                        <button id="stop">Stop</button>
+                    </div>
+                    <label for="speed">Playback speed</label>
+                    <input id="speed" type="range" min="1" max="12" value="6">
+                    <label class="check"><input id="prune" type="checkbox" checked> Skip dead squares</label>
+                    <label class="check"><input id="showDead" type="checkbox"> Show dead squares on the board</label>
+                </div>
+
+                <div>
+                    <h2>Result</h2>
+                    <dl>
+                        <dt>Your moves</dt><dd id="sMoves">0</dd>
+                        <dt>Your pushes</dt><dd id="sPush">0</dd>
+                        <dt>Solver moves</dt><dd id="sBest">–</dd>
+                        <dt>Solver pushes</dt><dd id="sBestPush">–</dd>
+                        <dt>States expanded</dt><dd id="sStates">–</dd>
+                        <dt>Solve time (ms)</dt><dd id="sMs">–</dd>
+                    </dl>
+                </div>
+
+                <div>
+                    <h2>Compare</h2>
+                    <button id="cmpBtn">Compare algorithms</button>
+                    <table>
+                        <thead><tr><th></th><th>States</th><th>Moves</th><th>Pushes</th><th>ms</th></tr></thead>
+                        <tbody id="cmp"><tr><td colspan="5">Runs every algorithm from the start of this level.</td></tr></tbody>
+                    </table>
+                </div>
+            </aside>
+        </main>
+    <script src="solver.js"></script>
+    <script src="levels.js"></script>
+    <script src="game.js"></script>
+    </body>
+</html>
