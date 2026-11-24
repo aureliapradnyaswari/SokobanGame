@@ -1,0 +1,13 @@
+level,algorithm,prune,status,moves,pushes,visited,expanded,generated,peak_frontier,runs,mean_ms,median_ms,sd_ms 
+First push,bfs,false,solved,8,4,204,203,307,104,30,0.266,0.174,0.251                                            
+First push,bfs,true,solved,8,4,133,132,179,52,30,0.213,0.138,0.198                                             
+First push,dfs,false,solved,50,8,641,640,677,65,30,0.687,0.520,0.550                                            
+First push,dfs,true,solved,50,8,210,209,244,44,30,0.241,0.224,0.120                                             
+Two crates,bfs,false,solved,12,5,910,909,1178,270,30,1.133,1.061,0.501                                          
+Two crates,bfs,true,solved,12,5,462,461,578,118,30,0.486,0.423,0.186                                            
+Two crates,dfs,false,solved,102,25,686,685,754,69,30,0.742,0.616,0.494                                         
+Two crates,dfs,true,solved,102,25,175,174,241,67,30,0.240,0.172,0.210                                          
+Long way round,bfs,false,solved,28,15,6526,6525,7197,688,30,6.149,5.665,1.990                            
+Long way round,bfs,true,solved,28,15,4148,4147,4485,370,30,5.223,3.860,5.413                               
+Long way round,dfs,false,solved,150,23,1011,1010,1054,55,30,0.736,0.635,0.215                  
+Long way round,dfs,true,solved,150,23,258,257,300,45,30,0.241,0.182,0.140     
