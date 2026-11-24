@@ -38,4 +38,4 @@ benchmark.js             growth measurements for the report (node benchmark.js >
 |---|---|---|
 | Aurelia Pradnyaswari Sanjaya Erawan| Levels, tests, benchmark, report (`levels.js`, `test.js`, `benchmark.js`, report) | 33.33% |
 | Deara briliana Putri | Game logic, Algorithms (`index.html`, `game.js`, report) | 33.33% |
-| Marsya Safina Maulidiyah | Algorithms (`solver.js`, `style.css`) | 33.33% |
+| Marsya Safina Maulidiyah | Interface and Algorithms (`solver.js`, `style.css`) | 33.33% |
