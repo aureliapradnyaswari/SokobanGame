@@ -3,7 +3,7 @@
 A Sokoban puzzle game with built-in search algorithms. You push crates onto goals; **BFS** and **DFS** can solve the level so their behaviour can be compared side by side.
 Course project for **Design and Analysis of Algorithms (EF234405), 2026/2027**.
 
-**Live demo:** <add github page soon>
+**Live demo:** https://aureliapradnyaswari.github.io/SokobanGame/
 
 ## Features
 - Isometric 3D-style Canvas board, responsive dashboard, high-DPI rendering and touch swipe controls.
